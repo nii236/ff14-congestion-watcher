@@ -108,7 +108,8 @@ func checkList(c *cli.Context) error {
 		return nil
 	}
 
-	result = fmt.Sprintf("%s is no longer congested\n", world)
+	result = fmt.Sprintf("%s is no longer congested", world)
+	log.Println(result)
 
 	bot, err := tb.NewBot(tb.Settings{
 		Token:  flags.BotAPIToken,
